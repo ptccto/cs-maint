@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Under Maintenance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -18,20 +18,18 @@
             font-family: 'Rubik', sans-serif;
         }
         
-        /* Fixed and floated navbar at the top */
+        /* Positioned the logo wrapper at the top-most left side */
         #navbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 0;
-            z-index: 10; /* Keeps it above the blur and content layers */
-            text-align: center;
+            top: 24px;   /* Sets spacing from the top edge */
+            left: 24px;  /* Sets spacing from the left edge */
+            z-index: 10; /* Keeps it above the blur and text overlay layers */
         }
 
         #navbar img {
-            max-height: 60px; /* Optional: bounds logo sizing */
+            max-height: 50px; /* Adjust this value to resize the logo layout */
             width: auto;
+            display: block;
         }
 
         .content {
@@ -39,7 +37,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh; 
-            flex-direction: column;
+            width: 100vw;
+            box-sizing: border-box;
         }
 
         .text-content {
@@ -47,7 +46,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         .overlay {
@@ -66,14 +65,7 @@
             color: #ffffff;
             z-index: 3;
             line-height: 1.4;
-        }
-
-        a {
-            position: relative;
-            color: #ffffff;
-            text-decoration: none;
-            margin-top: 20px;
-            z-index: 3;
+            margin: 0;
         }
 
         #block-container {
@@ -117,11 +109,12 @@
     <div id="blur"></div>
     <div class="overlay"></div>
 
-    <!-- The Navbar has been brought out of the main container to float independently -->
+    <!-- Top Left Floating Logo -->
     <div id="navbar">
-        <img src="https://cs-maint.pages.dev/ptcbannerwhite.png" alt="Philtrust Bank logo" title="Philtrust Bank Maintenance Page">
+        <img src="https://pages.dev" alt="Philtrust Bank logo" title="Philtrust Bank Maintenance Page">
     </div>
 
+    <!-- Centered Maintenance Message Layout -->
     <div class="content">
         <div class="text-content">
             <h1>The <span class="effect" data-value="Philtrust Bank Corporate Site">Philtrust Bank Corporate Site</span> is under routine upgrades and maintenance. <br /> Please check back in a little while. </h1>
